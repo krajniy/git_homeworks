@@ -1,0 +1,30 @@
+# оба скрипта лежат в моей папке /opt/35_36_evening/elena_ivanishcheva
+#Первый скрипт
+df -h | awk '{print$6}' | tail -1 | sed 's/user/ivanishcheva/' > /opt/35_36_evening/elena_ivanishcheva/filedf.txt
+cat /opt/35_36_evening/elena_ivanishcheva/filedf.txt
+
+
+#Скрипт fullscript. Я дала ему права export PATH=$PATH:/opt/35_36_evening/elena_ivanishcheva. Насколько я поняла, такой способ действует только для моего сеанса и не сохраняется
+
+#!/bin/bash
+echo "Hello Student!"
+echo -n "Enter your name"
+read name
+echo "Welcome to terminal " $name
+mkdir -p /tmp/test
+date > /tmp/mydate.txt
+echo "Saving data"
+for run in {1..10}
+do
+echo $run
+sleep 0.5
+done
+echo "Data saved. Continue work"
+df -h >> /tmp/mydate.txt
+cp /tmp/mydate.txt /opt/mydate/newmydate.txt
+for run in {1..5}
+do
+echo $run
+sleep 1
+done
+echo "Well done Boss"
