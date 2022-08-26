@@ -29,7 +29,8 @@
 
 Создание репозитория:
 		mkdir git-project
-		cd git-project		
+		cd git-project
+		git init		
 
 Добавление файлов в индекс и выполнение коммита.
 		git add . (или git add somefile)
